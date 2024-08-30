@@ -15,12 +15,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 const nextConfig = {
-  output: 'export',
-
   reactStrictMode: true,
   experimental: {
     optimizeCss: true,
-    // legacyBrowsers: false,
     nextScriptWorkers: true,
   },
   compiler: {
