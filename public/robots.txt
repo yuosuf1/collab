@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://collab.vercel.app
+
+# Sitemaps
+Sitemap: https://collab.vercel.app/sitemap.xml
