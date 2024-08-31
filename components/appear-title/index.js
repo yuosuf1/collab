@@ -26,7 +26,7 @@ export function AppearTitle({ children, visible = true }) {
         el.current = node
         rectRef(node)
       }}
-      className={cn(s.title, intersected && visible && s.visible)}
+      className={cn(s.title, intersected && visible && s.visible, s.arabic)}
     >
       {children}
     </span>

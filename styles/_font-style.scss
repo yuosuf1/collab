@@ -1,13 +1,13 @@
 .h1 {
   font-weight: 900;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
-  line-height: 86%;
+  line-height: 100%;
   font-size: mobile-vw(56px);
 
   @include desktop {
     font-size: desktop-vw(160px);
-    line-height: 85%;
+    line-height: 100%;
   }
 
   &.vh {
@@ -79,7 +79,7 @@
 .p-l {
   font-weight: 500;
   line-height: 100%;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.0em;
   font-size: mobile-vw(32px);
 
   @include desktop {
@@ -119,6 +119,7 @@
     line-height: 114%;
   }
 }
+
 
 .p-xs {
   font-weight: 600;

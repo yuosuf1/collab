@@ -219,14 +219,15 @@ export default function Home() {
       <section className={s.hero}>
         <div className="layout-grid-inner">
           <Title className={s.title} />
-          {/* <SFDR className={cn(s.icon, introOut && s.show)} /> */}
           <span className={cn(s.sub)}>
             <HeroTextIn introOut={introOut}>
-              <h2 className={cn('h3', s.subtitle)}>Studio</h2>
+              <h2 className={cn('h3', s.subtitle, s.arabic)}>
+                إبداع يعكس هويتك
+              </h2>
             </HeroTextIn>
             <HeroTextIn introOut={introOut}>
-              <h2 className={cn('p-xs', s.tm)}>
-                creativity reflects your identity.
+              <h2 className={cn('p-xs', s.tm, s.arabic)}>
+                استوديو ابداعي يختص بالانتاج المرئي و التسويق الرقمي
               </h2>
             </HeroTextIn>
           </span>
@@ -241,102 +242,100 @@ export default function Home() {
               introOut && s.show
             )}
           >
-            <div className={s.text}>
+            <div className={cn(s.text, s.arabic)}>
               <HeroTextIn introOut={introOut}>
-                <p>scroll</p>
+                <p>تصفح</p>
               </HeroTextIn>
               <HeroTextIn introOut={introOut}>
-                <p> to explore</p>
+                <p>للمزيد</p>
               </HeroTextIn>
             </div>
           </div>
-          <h1 className={cn(s.description, 'p-s')}>
+          <h1 className={cn(s.description, 'p-s', s.arabic, s.rtl)}>
             <HeroTextIn introOut={introOut}>
-              <p className="p-s">A creative advertising company.</p>
+              <p className="p-s">صناعة محتوى ابداعي</p>
             </HeroTextIn>
             <HeroTextIn introOut={introOut}>
-              <p className="p-s">specializing in branding, solutions, </p>
+              <p className="p-s">بفريق شبابي متميز يمتلك خبرة كبيرة</p>
             </HeroTextIn>
             <HeroTextIn introOut={introOut}>
-              <p className="p-s">and social media development</p>
+              <p className="p-s">
+                و مدرب لجمع الابداع لإبتكار حلول اعلانية مميزة
+              </p>
             </HeroTextIn>
           </h1>
           <Button
-            className={cn(s.cta, introOut && s.in)}
+            className={cn(s.cta, introOut && s.in, s.arabic)}
             arrow
             icon={<Whatsapp />}
             href="https://whatsapp.com"
           >
-            Conact us on Whatsapp
+            تواصل معنا على واتساب
           </Button>
         </div>
       </section>
-      <section className={s.why} data-lenis-scroll-snap-align="start">
+      <section dir="rtl" className={s.why} data-lenis-scroll-snap-align="start">
         <div className="layout-grid">
-          <h2 className={cn(s.sticky, 'h2')}>
-            <AppearTitle>Why collab studio?</AppearTitle>
+          <h2 className={cn(s.sticky, 'h2', s.arabic)}>
+            <AppearTitle>لماذا كولاب استوديو؟</AppearTitle>
           </h2>
           <aside className={s.features} ref={whyRectRef}>
             <div className={s.feature}>
-              <p className="p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-                esse illo veniam, obcaecati consequuntur consequatur minus ipsa
-                illum quo sit, itaque placeat. Deserunt, quasi provident nulla
-                veritatis corporis doloremque asperiores!
+              <p className={cn('p', s.arabic)}>
+                كولاب استوديو, استوديو ابداع متكامل يختص في تقديم خدمات الانتاج
+                المرئي بمختلف مراحله, نعمل بشغف لتحقيق رؤى عملائنا عبر تحويل
+                افكارهم الى محتوى مرئي يعبر عن رسالتهم بوضوح
               </p>
             </div>
             <div className={s.feature}>
-              <h3 className={cn(s.title, 'h4')}>Create more productivity</h3>
-              <p className="p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                perspiciatis, iusto totam molestiae maiores harum sit animi in
-                minima, unde, quasi repellendus nobis voluptatem veniam
-                inventore optio non error laborum!
-              </p>
-            </div>
-            <div className={s.feature}>
-              <h3 className={cn(s.title, 'h4')}>full service provided</h3>
-              <p className="p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                maiores ipsum dicta adipisci eveniet beatae nam aut sint quos
-                error dolorem saepe pariatur corporis at ad, magni maxime ab
-                rerum.
-              </p>
-            </div>
-            <div className={s.feature}>
-              <h3 className={cn(s.title, 'h4')}>
-                reach your creativity demands
+              <h3 className={cn(s.title, 'h4', s.arabic)}>
+                فريقنا الشبابي المتميز
               </h3>
-              <p className="p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Recusandae ex, illo blanditiis quod incidunt exercitationem
-                labore ut dicta aut necessitatibus quo. Nobis odio error
-                molestias earum. Aliquam eum numquam accusantium!
+              <p className={cn('p', s.arabic)}>
+                يمتلك خبرة رائعة وساعات خبرة كبيرة و مدرّب على ان يجمع بين
+                الإبداع والتفكير الاستراتيجي مما يمكننا من ابتكار حلول إعلانية
+                مبتكرة وفعالة
+              </p>
+            </div>
+            <div className={s.feature}>
+              <h3 className={cn(s.title, 'h4', s.arabic)}>
+                رؤيتنا في كولاب استوديو
+              </h3>
+              <p className={cn('p', s.arabic)}>
+                رؤيتنا هي تقديم إنتاجات تتميز بالأصالة والابتكار، حيث نبتعد عن
+                التكرار والنمطية لنقدم تجارب بصرية جديدة وغير تقليدية و نسعى إلى
+                استخدام أحدث التقنيات والاتجاهات في صناعة المحتوى، مع التركيز
+                على تقديم أعمال تتسم بالنقاء والوضوح
+              </p>
+            </div>
+            <div className={s.feature}>
+              <h3 className={cn(s.title, 'h4', s.arabic)}>خدماتنا</h3>
+              <p className={cn('p', s.arabic)}>
+                نقدم خدمات إنتاج متكاملة تركز على خلق محتوى مرئي يتماشى مع
+                أهدافك الاستراتيجية، سواء كان ذلك من خلال الفيديوهات الإعلانية
+                أو المحتوى البصري المتنوع، نعمل على تقديم إنتاجات عالية الجودة
+                تعزز من تواجد .علامتك التجارية
               </p>
             </div>
           </aside>
         </div>
       </section>
-      <section className={s.rethink}>
-        <div className={cn('layout-grid', s.pre)}>
+      <section dir="rtl" className={s.rethink}>
+        <div className={cn('layout-grid', s.pre, s.arabic)}>
           <div className={s.highlight} data-lenis-scroll-snap-align="start">
             <Parallax speed={-0.5}>
               <p className="h2">
-                <AppearTitle>
-                  searching creative studio difficulties
-                </AppearTitle>
+                <AppearTitle>البحث عن اعلانات ابداعية؟</AppearTitle>
               </p>
             </Parallax>
           </div>
           <div className={s.comparison}>
             <Parallax speed={0.5}>
-              <p className="p">
-                When working with a traditional marketing agency, you might
-                encounter several challenges that can impact the effectiveness
-                of your campaigns and your overall business growth. Traditional
-                agencies often focus on established methods and may not always
-                have the adaptability or creativity needed in today’s fast-paced
-                market.
+              <p className={cn('p', s.arabic)}>
+                عند البحث عن الإعلانات الإبداعية، ركز على العثور على الأساليب
+                المبتكرة التي تجذب الانتباه وتُشرك الجمهور. ابحث عن الإعلانات
+                التي تتجاوز الحدود، وتستخدم تصاميم فريدة، وتروي قصصاً جذابة عبر
+                منصات متنوعة مثل الرقمية والمطبوعة ووسائل التواصل الاجتماعي.
               </p>
             </Parallax>
           </div>
@@ -344,29 +343,29 @@ export default function Home() {
         <div className={s.cards} ref={cardsRectRef}>
           <HorizontalSlides>
             <Card
-              className={s.card}
+              className={cn(s.card, s.arabic)}
               number="01"
-              text="Lack of Innovation Relies on outdated methods, lacking fresh ideas"
+              text="أساليب مبتكرة وجديدة, إعلانات تبرز في السوق التنافسي."
             />
             <Card
-              className={s.card}
+              className={cn(s.card, s.arabic)}
               number="02"
-              text="Limited Digital Expertise, Insufficient experience with modern digital strategies"
+              text="محتوى يجذب الانتباه, التركيز على الإعلانات التي تلتقط الانتباه بفعالية."
             />
             <Card
-              className={s.card}
+              className={cn(s.card, s.arabic)}
               number="03"
-              text="Slow Adaptation to Trends. Struggles to keep up with marketing trends"
+              text="سرد قصصي مثير و إعلانات تروي قصصاً جذابة وملهمة."
             />
             <Card
-              className={s.card}
+              className={cn(s.card, s.arabic)}
               number="04"
-              text="Generic Campaigns, Produces non-personalized, one-size-fits-all campaigns"
+              text="تصاميم فريدة, البحث عن إعلانات ذات تصميمات مميزة وجذابة. تناسب محتوى هويتك."
             />
             <Card
-              className={s.card}
+              className={cn(s.card, s.arabic)}
               number="05"
-              text="Higher Costs for Less Impact, Expensive methods with lower return on investment"
+              text="الخبرة في المنصات ركز على إعلانات تستفيد من منصات متعددة مثل الرقمية ووسائل التواصل الاجتماعي."
             />
           </HorizontalSlides>
         </div>
@@ -380,28 +379,32 @@ export default function Home() {
       >
         <div className={s.inner}>
           <div className={s.zoom}>
-            <h2 className={cn(s.first, 'h1 vh')}>
-              so we made <br />
-              <span className="contrast">creative solutions</span>
+            <h2
+              dir="rtl"
+              style={{ fontWeight: 900 }}
+              className={cn(s.first, 'h1 vh', s.arabic)}
+            >
+              لذلك صنعنا <br />
+              <span className="contrast">الحلول الابداعية</span>
             </h2>
             <h2 className={cn(s.enter, 'h3 vh')}>
               Collab <br /> Studio
             </h2>
-            <h2 className={cn(s.second, 'h1 vh')}>As it should be</h2>
+            <h2 dir="rtl" className={cn(s.second, 'h1 vh', s.arabic)}>
+              كما يجب ان تكن
+            </h2>
           </div>
         </div>
       </section>
       <section className={cn('theme-light', s.featuring)} ref={whiteRectRef}>
         <div className={s.inner}>
-          <div className={cn('layout-block', s.intro)}>
+          <div dir="rtl" className={cn('layout-block', s.intro, s.arabic)}>
             <p className="p-l">
-              Collab studio is a{' '}
-              <span className="contrast semi-bold">
-                creative advertising company
-              </span>{' '}
-              runs with passion and Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Quis illum repudiandae, voluptatem quas
-              voluptate minus consectetur.
+              اهدافنا نحن في{' '}
+              <span className="contrast semi-bold">كولاب استوديو</span> نسعى لأن
+              نكون الخيار الأمثل للعملاء الذين يبحثون عن تميز حقيقي في تقديم
+              رسائلهم البصرية من خلال التزامنا الثابت بأعلى معايير الجودة
+              والابتكار
             </p>
           </div>
         </div>
@@ -416,13 +419,13 @@ export default function Home() {
         }}
         className={cn('theme-light', s['in-use'], visible && s.visible)}
       >
-        <div className="layout-grid">
+        <div dir="rtl" className="layout-grid">
           <aside className={s.title}>
             <p className="h3">
               <AppearTitle>
-                Collab
+                صنع بواسطة
                 <br />
-                <span className="grey">Clients</span>
+                <span className="grey">كولاب</span>
               </AppearTitle>
             </p>
           </aside>

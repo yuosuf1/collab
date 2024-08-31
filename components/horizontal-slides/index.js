@@ -56,6 +56,7 @@ export const HorizontalSlides = ({ children }) => {
 
   return (
     <div
+      dir="ltr"
       className={s.wrapper}
       ref={wrapperRectRef}
       style={

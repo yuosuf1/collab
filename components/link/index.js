@@ -31,6 +31,7 @@ export const Link = forwardRef(
     if (isProtocol || isExternal) {
       return (
         <a
+          dir="ltr"
           {...attributes}
           href={href}
           target="_blank"

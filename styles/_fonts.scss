@@ -1,9 +1,8 @@
 @font-face {
   font-family: 'Slussen';
-  src: url('/fonts/Slussen-Compressed-Black.woff2') format('woff2');
+  src: url('/fonts/Slussen-Compressed-Black.woff2');
   font-display: swap;
   font-weight: 900;
-  font-stretch: compressed;
 }
 
 @font-face {
@@ -49,6 +48,15 @@
   font-weight: 900;
 }
 
+@font-face {
+  font-family: 'IBM';
+  src: url('/fonts/ibm-regular.ttf');
+  font-stretch: compressed;
+
+
+}
+
 :root {
   --font-primary: 'Slussen';
+  --font-arabic:"IBM"
 }

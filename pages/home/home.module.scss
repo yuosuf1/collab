@@ -52,6 +52,13 @@ $intro-duration: 2050ms;
   }
 }
 
+.arabic{
+  font-family: var(--font-arabic);
+}
+.rtl{
+  direction: rtl;
+}
+
 .hero {
   display: flex;
   flex-direction: column;

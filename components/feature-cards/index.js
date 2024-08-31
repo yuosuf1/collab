@@ -16,25 +16,21 @@ const AppearTitle = dynamic(
 import s from './feature-cards.module.scss'
 
 const cards = [
-  { text: 'Advertising Experts' },
+  { text: 'استوديو ابداعي متكامل' },
 
   {
-    text: (
-      <>
-        Branding <br /> (Modern)
-      </>
-    ),
+    text: 'استتراتيجيات تطوير العلامة التجارية',
   },
-  { text: `Cross Platforms Marketing` },
-  { text: 'Social Media Managment' },
+  { text: 'كادر شبابي مختص' },
+  { text: 'خبرة ابداعية عصرية' },
   {
-    text: <>Specialized Team </>,
+    text: 'إدارة وسائل التواصل الاجتماعي',
   },
-  { text: 'Anything goes there' },
-  { text: 'Anything goes there' },
-  { text: 'nothing should be here lol' },
+  { text: 'إدارة الحملات الإعلانية' },
+  { text: 'إ' },
+  { text: '' },
   {
-    text: 'keep scrolling',
+    text: '',
   },
 ]
 
@@ -71,11 +67,11 @@ export const FeatureCards = () => {
     >
       <div className={cn('layout-block-inner', s.sticky)}>
         <aside className={s.title}>
-          <p className="h3">
+          <p className={cn('h3', s.arabic)}>
             <AppearTitle>
-              Why
+              لماذا
               <br />
-              <span className="grey">Collab Studio?</span>
+              <span className="grey">كولاب استوديو؟</span>
             </AppearTitle>
           </p>
         </aside>
@@ -97,7 +93,10 @@ export const FeatureCards = () => {
 
 const SingleCard = ({ text, number, index, current }) => {
   return (
-    <div className={cn(s.card, current && s.current)} style={{ '--i': index }}>
+    <div
+      className={cn(s.card, current && s.current, s.arabic)}
+      style={{ '--i': index }}
+    >
       <Card background="rgba(138, 143, 130, 0.8)" number={number} text={text} />
     </div>
   )

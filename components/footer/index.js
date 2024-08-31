@@ -11,10 +11,10 @@ const Whatsapp = dynamic(() => import('icons/whatsapp-white.svg'), {
 export const Footer = () => {
   return (
     <footer className={cn('theme-light', s.footer)}>
-      <div className={cn(s.top, 'layout-grid hide-on-mobile')}>
-        <p className={cn(s['first-line'], 'h1')}>
-          Let's <br />
-          <span className="contrast">Collab.</span>
+      <div dir="rtl" className={cn(s.top, 'layout-grid hide-on-mobile')}>
+        <p className={cn(s['first-line'], 'h1', s.arabic)}>
+          كن مع {''}
+          <span className="contrast">كولاب</span>
         </p>
         {/* <div className={s['shameless-plug']}>
           <p className="h4">Studio Freight</p>
@@ -22,17 +22,16 @@ export const Footer = () => {
             An independent creative <br /> studio built on principle
           </p>
         </div> */}
-        <p className={cn(s['last-line'], 'h1')}>
-          & Start <span className="hide-on-desktop">&nbsp;</span> Projects,{' '}
-          <br /> Together &nbsp;
+        <p className={cn(s['last-line'], 'h1', s.arabic)}>
+          و لنبدأ <span className="hide-on-desktop">&nbsp;</span> معا &nbsp;
         </p>
         <Button
-          className={s.cta}
+          className={cn(s.cta, s.arabic)}
           arrow
           icon={<Whatsapp />}
           href="https://whatsapp.com"
         >
-          Let's talk together
+          تواصل معنا الان
         </Button>
       </div>
       <div className={cn(s.top, 'layout-block hide-on-desktop')}>
@@ -43,10 +42,10 @@ export const Footer = () => {
           </p>
         </div> */}
         <p className={cn(s['first-line'], 'h1')}>
-          Let's {''}
-          <span className="contrast">Collab</span>
-          <br /> &<br /> start Projects,
-          <br /> Together
+          كن مع {''}
+          <span className="contrast">كولاب</span>
+          <br /> &<br /> و لنبدأ ,
+          <br /> معا
         </p>
       </div>
       <div className={s.bottom}>
