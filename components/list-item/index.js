@@ -19,7 +19,7 @@ export const ListItem = ({
       className={cn(className, s.item, visible && s.visible)}
       style={{ '--i': index }}
     >
-      <div className={s.inner}>
+      <div dir="rtl" className={cn(s.inner, s.arabic)}>
         <div className={s.title}>
           <span className={s.text}>{title}</span>
           <Arrow className={s.arrow} />

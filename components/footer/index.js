@@ -16,12 +16,7 @@ export const Footer = () => {
           كن مع {''}
           <span className="contrast">كولاب</span>
         </p>
-        {/* <div className={s['shameless-plug']}>
-          <p className="h4">Studio Freight</p>
-          <p className="p-s">
-            An independent creative <br /> studio built on principle
-          </p>
-        </div> */}
+
         <p className={cn(s['last-line'], 'h1', s.arabic)}>
           و لنبدأ <span className="hide-on-desktop">&nbsp;</span> معا &nbsp;
         </p>
@@ -34,18 +29,20 @@ export const Footer = () => {
           تواصل معنا الان
         </Button>
       </div>
-      <div className={cn(s.top, 'layout-block hide-on-desktop')}>
+
+      {/* ********************************************* */}
+      <div dir="rtl" className={cn(s.top, 'layout-block hide-on-desktop')}>
         {/* <div className={s['shameless-plug']}>
           <p className="h4">Studio Freight</p>
           <p className="p-s">
             An independent creative <br /> studio built on principle
           </p>
         </div> */}
-        <p className={cn(s['first-line'], 'h1')}>
-          كن مع {''}
+        <p className={cn(s['first-line'], 'h1', s.arabic)}>
+          تواصل مع {''}
           <span className="contrast">كولاب</span>
-          <br /> &<br /> و لنبدأ ,
-          <br /> معا
+          <br /> و ابدأ مشوار
+          <br /> الإبداع
         </p>
       </div>
       <div className={s.bottom}>
@@ -64,16 +61,16 @@ export const Footer = () => {
             Designed by Collab Studio
           </Link>
         </div>
-        <p className={cn('p-xs', s.tm)}>
-          <span>©</span> {new Date().getFullYear()} Collab Studio
+        <p className={cn('p-xs', s.tm, s.arabic)}>
+          <span>©</span> {new Date().getFullYear()} كولاب استوديو
         </p>
         <Button
-          className={cn(s.cta, 'hide-on-desktop')}
+          className={cn(s.cta, 'hide-on-desktop', s.arabic)}
           arrow
           icon={<Whatsapp />}
           href="https://whatsapp.com"
         >
-          Let's Talk
+          تواصل معنا
         </Button>
       </div>
     </footer>

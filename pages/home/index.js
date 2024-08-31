@@ -429,7 +429,7 @@ export default function Home() {
               </AppearTitle>
             </p>
           </aside>
-          <ul className={s.list}>
+          <ul dir="ltr" className={s.list}>
             {projects.map(({ title, source, href }, i) => (
               <li key={i}>
                 <ListItem

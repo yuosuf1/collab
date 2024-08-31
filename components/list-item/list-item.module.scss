@@ -77,7 +77,7 @@
 
     .arrow {
       aspect-ratio: 1 / 1;
-      margin-left: auto;
+      margin-right: auto;
       width: mobile-vw(19px);
 
       @include mobile {
@@ -87,7 +87,7 @@
       @include desktop {
         transform: translate(-20%, 20%);
         opacity: 0;
-        margin-left: desktop-vw(24px);
+        margin-right: desktop-vw(24px);
         width: desktop-vw(19px);
       }
     }
@@ -116,7 +116,7 @@
       }
 
       .title {
-        transform: translateX(desktop-vw(16px));
+        transform: translateX(desktop-vw(-16px));
 
         .arrow {
           transition: opacity 600ms var(--ease-out-expo),
@@ -128,7 +128,7 @@
       }
 
       .source {
-        transform: translateX(desktop-vw(-16px));
+        transform: translateX(desktop-vw(16px));
       }
     }
   }
@@ -171,4 +171,8 @@
       }
     }
   }
+}
+
+.arabic{
+  font-family: var(--font-arabic);
 }
