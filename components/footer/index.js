@@ -16,13 +16,11 @@ export const Footer = () => {
     <footer className={cn('theme-light', s.footer)}>
       <div dir="rtl" className={cn(s.top, 'layout-block hide-on-mobile')}>
         <div className={cn(s.logo)}>
-          <p className={cn(s['first-line'], 'h1', s.arabic)}>
-            <span className={cn('contrast', s.lightGreen)}>
-              <CollabLogo />
-            </span>
-            <br /> ابداع يعكس هويتك
-          </p>
+          <span className={cn('contrast', s.lightGreen)}>
+            <CollabLogo />
+          </span>
         </div>
+        <p className={cn(s['first-line'], 'h1', s.arabic)}>ابداع يعكس هويتك</p>
 
         <Button
           className={cn(s.cta, s.arabic)}

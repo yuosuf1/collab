@@ -47,7 +47,7 @@
       @include desktop {
         margin: 0;
         align-self: start;
-        grid-column: 1 / span 7;
+       // grid-column: 1 / span 7;
       }
     }
 
@@ -86,7 +86,7 @@
   }
 
   .logo{
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
   }
 
