@@ -98,9 +98,7 @@ export default function Home() {
   useEffect(() => {
     if (!lenis) return
 
-    function onClassNameChange(lenis) {
-      console.log(lenis.className)
-    }
+    function onClassNameChange(lenis) {}
 
     lenis.on('className change', onClassNameChange)
 
@@ -165,6 +163,7 @@ export default function Home() {
 
   useEffect(() => {
     const top = whiteRect.top - windowHeight
+    console.log('WhiteRect: ', top)
     addThreshold({ id: 'light-start', value: top })
   }, [whiteRect])
 
@@ -182,14 +181,6 @@ export default function Home() {
     const top = lenis?.limit
     addThreshold({ id: 'end', value: top })
   }, [lenis?.limit])
-
-  useScroll((e) => {
-    console.log(window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
-  })
-
-  useFrame(() => {
-    console.log('frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
-  }, 1)
 
   const inUseRef = useRef()
 
@@ -401,9 +392,9 @@ export default function Home() {
           <div dir="rtl" className={cn('layout-block', s.intro, s.arabic)}>
             <p className="p-l">
               اهدافنا نحن في{' '}
-              <span className="contrast semi-bold">كولاب استوديو</span> نسعى لأن
-              نكون الخيار الأمثل للعملاء الذين يبحثون عن تميز حقيقي في تقديم
-              رسائلهم البصرية من خلال التزامنا الثابت بأعلى معايير الجودة
+              <span className={cn('contrast semi-bold')}>كولاب استوديو</span>{' '}
+              نسعى لأن نكون الخيار الأمثل للعملاء الذين يبحثون عن تميز حقيقي في
+              تقديم رسائلهم البصرية من خلال التزامنا الثابت بأعلى معايير الجودة
               والابتكار
             </p>
           </div>

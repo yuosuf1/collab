@@ -71,9 +71,7 @@ export function CustomHead({ title = '', description, image, keywords }) {
           locale: 'en_US',
           images: [
             {
-              url: image
-                ? image.url
-                : 'https://lenis.darkroom.engineering/og.png',
+              url: image ? image.url : 'https://collabstudio.vercel.app/og.png',
               width: image ? image.width : 1200,
               height: image ? image.height : 630,
               alt: title,
@@ -84,7 +82,7 @@ export function CustomHead({ title = '', description, image, keywords }) {
           site_name: '',
         }}
         twitter={{
-          handle: '@darkroomdevs',
+          handle: '@collabstudioiraq',
           cardType: 'summary_large_image',
         }}
       />

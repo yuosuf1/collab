@@ -243,7 +243,6 @@ const material = new MeshPhysicalMaterial({
   wireframe: true,
   side: DoubleSide,
 })
-/* 
 export function Arm() {
   const { scene: arm1 } = useGLTF('/models/arm.glb')
   const { scene: arm2 } = useGLTF('/models/arm2.glb')
@@ -251,7 +250,7 @@ export function Arm() {
 
   const [{ color, roughness, metalness, wireframe }, setMaterial] = useControls(
     () => ({
-      color: '#efefef',
+      color: '#025239',
       roughness: {
         min: 0,
         value: 0.4,
@@ -309,7 +308,7 @@ export function Arm() {
         max: 1,
       },
       lightsColor: '#025239',
-      ambientColor: '#0E0E0E',
+      ambientColor: '#E0E0E0',
     }),
     []
   )
@@ -380,25 +379,25 @@ export function Arm() {
   useEffect(() => {
     if (step === 0) {
       setLights({
-        light1Intensity: 0.35,
-        light2Intensity: 0.15,
-        lightsColor: '#025239',
+        light1Intensity: 1,
+        light2Intensity: 1,
+        lightsColor: '#F5F5F5',
         ambientColor: '#025239',
       })
       setMaterial({
-        color: '#b0b0b0',
-        roughness: 0.4,
+        color: '#FFF',
+        roughness: 0.6,
         metalness: 1,
       })
     } else {
       setLights({
-        light1Intensity: 1,
-        light2Intensity: 1,
-        lightsColor: '#efefef',
-        ambientColor: '#b0B0B0',
+        light1Intensity: 0.2,
+        light2Intensity: 0.2,
+        lightsColor: '#025239', ////
+        ambientColor: '#2A2A2C',
       })
       setMaterial({
-        color: '#efefef',
+        color: '#F5F5F5', //
         roughness: 0.4,
         metalness: 0.6,
       })
@@ -482,14 +481,14 @@ export function Arm() {
         {/* <mesh scale={25}>
           <boxGeometry />
           <meshBasicMaterial color={'red'} />
-        </mesh> */ /*} 
+        </mesh> */}
         <directionalLight args={[new Color(lightsColor), light1Intensity]} />
       </group>
       <group position={light2}>
         {/* <mesh scale={25}>
           <boxGeometry />
           <meshBasicMaterial color={'red'} />
-        </mesh> */ /*}
+        </mesh> */}
         <directionalLight args={[new Color(lightsColor), light2Intensity]} />
       </group>
       <Float floatIntensity={custom ? 0 : 1} rotationIntensity={custom ? 0 : 1}>
@@ -503,20 +502,20 @@ export function Arm() {
           //   MathUtils.degToRad(140),
           // ]}
         >
-          {/* <TransformControls mode="rotate"> */ /*}
+          {/* <TransformControls mode="rotate"> */}
           {type === 1 && <primitive object={arm1} scale={[1, 1, 1]} />}
           {type === 2 && <primitive object={arm2} scale={[1, 1, 1]} />}
-          {/* </TransformControls> */ /*}
+          {/* </TransformControls> */}
         </group>
       </Float>
       {/* {target && (
         <TransformControls mode="translate" object={target} makeDefault />
-      )} */ /*}
-      {/* <OrbitControls makeDefault /> */ /*}
+      )} */}
+      {/* <OrbitControls makeDefault /> */}
     </>
   )
 }
- */
+
 function Content() {
   const { viewport } = useThree()
 
@@ -532,7 +531,7 @@ function Content() {
         size={150}
       />
 
-      {/*   <Arm /> */}
+      <Arm />
     </>
   )
 }

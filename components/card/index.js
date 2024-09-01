@@ -10,6 +10,7 @@ export const Card = ({
 }) => {
   return (
     <div
+      dir="rtl"
       className={cn(className, s.wrapper, inverted && s.inverted)}
       style={{ '--background': background }}
     >

@@ -7,19 +7,23 @@ import s from './footer.module.scss'
 const Whatsapp = dynamic(() => import('icons/whatsapp-white.svg'), {
   ssr: false,
 })
+const CollabLogo = dynamic(() => import('icons/collabLight.svg'), {
+  ssr: false,
+})
 
 export const Footer = () => {
   return (
     <footer className={cn('theme-light', s.footer)}>
-      <div dir="rtl" className={cn(s.top, 'layout-grid hide-on-mobile')}>
-        <p className={cn(s['first-line'], 'h1', s.arabic)}>
-          كن مع {''}
-          <span className="contrast">كولاب</span>
-        </p>
+      <div dir="rtl" className={cn(s.top, 'layout-block hide-on-mobile')}>
+        <div className={cn(s.logo)}>
+          <p className={cn(s['first-line'], 'h1', s.arabic)}>
+            <span className={cn('contrast', s.lightGreen)}>
+              <CollabLogo />
+            </span>
+            <br /> ابداع يعكس هويتك
+          </p>
+        </div>
 
-        <p className={cn(s['last-line'], 'h1', s.arabic)}>
-          و لنبدأ <span className="hide-on-desktop">&nbsp;</span> معا &nbsp;
-        </p>
         <Button
           className={cn(s.cta, s.arabic)}
           arrow
@@ -39,10 +43,10 @@ export const Footer = () => {
           </p>
         </div> */}
         <p className={cn(s['first-line'], 'h1', s.arabic)}>
-          تواصل مع {''}
-          <span className="contrast">كولاب</span>
-          <br /> و ابدأ مشوار
-          <br /> الإبداع
+          <span className={cn('contrast', s.lightGreen)}>
+            <CollabLogo />
+          </span>
+          <br /> ابداع يعكس هويتك
         </p>
       </div>
       <div className={s.bottom}>
